@@ -1,29 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jparadis <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 17:19:21 by jparadis          #+#    #+#             */
-/*   Updated: 2022/02/28 12:01:12 by jparadis         ###   ########.fr       */
+/*   Created: 2022/02/28 12:08:24 by jparadis          #+#    #+#             */
+/*   Updated: 2022/02/28 16:51:41 by jparadis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	aff_nbr(char a, char b, char c)
 {
+	write(1, &a, 1);
+	write(1, &b, 1);
 	write(1, &c, 1);
+	if (a != '7' || b != '8' || c != '9')
+	{
+		write(1, ", ", 2);
+	}
 }
 
-void 	ft_is_negative(int n)
+void	ft_print_comb(void)
 {
-	if (n < 0)
+	int	d;
+	int	e;
+	int	f;
+
+	d = '0';
+	while (d <= '7')
 	{
-		ft_putchar('N');
-	}
-	else
-	{
-		ft_putchar('P');
+		e = d + 1;
+		while (e <= '8')
+		{
+			f = e + 1;
+			while (f <= '9')
+			{	
+				aff_nbr(d, e, f);
+				f++;
+			}
+			e++;
+		}
+		d++;
 	}
 }
