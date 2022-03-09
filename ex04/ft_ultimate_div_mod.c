@@ -6,12 +6,12 @@
 /*   By: jparadis <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:13:45 by jparadis          #+#    #+#             */
-/*   Updated: 2022/03/07 16:37:21 by jparadis         ###   ########.fr       */
+/*   Updated: 2022/03/09 15:07:29 by jparadis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = *a;
 	*a = *a / *b;

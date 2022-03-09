@@ -6,7 +6,7 @@
 /*   By: jparadis <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 13:48:29 by jparadis          #+#    #+#             */
-/*   Updated: 2022/03/09 14:31:16 by jparadis         ###   ########.fr       */
+/*   Updated: 2022/03/09 15:09:12 by jparadis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -19,13 +19,12 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char	*str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(str[i] !='\0')
+	while (str [i] != '\0')
 	{
 		ft_putchar(str[i]);
 		i++;
 	}
 }
-
