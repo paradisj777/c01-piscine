@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jparadis <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 13:32:43 by jparadis          #+#    #+#             */
-/*   Updated: 2022/02/24 17:10:24 by jparadis         ###   ########.fr       */
+/*   Created: 2022/03/09 13:48:29 by jparadis          #+#    #+#             */
+/*   Updated: 2022/03/09 14:31:16 by jparadis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+#include <string.h>
 
-void	ft_print_alphabet(void)
+void	ft_putchar(char c)
 {
-   	write(1, "abcdefghijklmnopqrstuvwyz\n", 27);
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char	*str)
+{
+	int i;
+
+	i = 0;
+	while(str[i] !='\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }
 

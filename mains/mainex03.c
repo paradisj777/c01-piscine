@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jparadis <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 16:56:04 by jparadis          #+#    #+#             */
-/*   Updated: 2022/02/24 17:09:24 by jparadis         ###   ########.fr       */
+/*   Created: 2022/03/07 14:56:49 by jparadis          #+#    #+#             */
+/*   Updated: 2022/03/07 15:47:09 by jparadis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-#include <unistd.h>
+void	ft_div_mod(int a, int b, int *div, int *mod);
 
-void	ft_print_reverse_alphabet(void)
+int	main(void)
 {
-	write(1, "zyxwvutsrqponmlkjihgfedcba\n", 27);
+	int a;
+	int b;
+	int div;
+	int mod;
+	
+	a = 90;
+	b = 32;
+
+	printf("a = %d b = %d\n", a, b);
+	ft_div_mod(a, b, &div, &mod);
+	printf("div = %d mod = %d\n", div, mod);
+	return(0);
 }

@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jparadis <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 14:41:54 by jparadis          #+#    #+#             */
-/*   Updated: 2022/02/24 17:18:31 by jparadis         ###   ########.fr       */
+/*   Created: 2022/03/07 16:13:45 by jparadis          #+#    #+#             */
+/*   Updated: 2022/03/07 16:37:21 by jparadis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	write(1, "0123456789\n", 11);
+	int tmp;
+
+	tmp = *a;
+	*a = *a / *b;
+	*b = tmp % *b;
 }
